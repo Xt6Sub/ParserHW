@@ -46,26 +46,32 @@ public class Parser{
 
     //Program" --> "("Sequence State")".
     private void parseProgram() {
+
     }
 
     //Sequence --> "("Statements")".
     private void parseSequence(){
+
     }
 
     //Statements --> Stmt*
     private void parseStatements(){
+
     }
 
     //Stmt --> "(" {NullStatement | Assignment | Conditional | Loop | Block}")".
     private void parseStmt(){
+
     }
 
     //State -->  "("Pairs")".
     private void parseState(){
+
     }
 
     //Pairs --> Pair*.
     private void parsePairs(){
+
     }
 
     //Pair --> "("Identifier Literal")".

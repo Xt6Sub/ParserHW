@@ -56,7 +56,7 @@ Output:
 Note: After you get an error message for the symbol = remove this symbol and
 run the program. Repeat this until the last wrong token which is: ?
 
-You should get the following error messges:
+You should get the following error messages:
  Line 6: wrong token !
  Line 6: wrong token ?
 */
@@ -65,9 +65,8 @@ import java.io.*;
 
 public class Scanner{
     private char currentChar;
-    private byte currentKind;
     private StringBuffer currentSpelling;
-    private BufferedReader inFile;
+    private final BufferedReader inFile;
     private static int line = 1;
 
     public Scanner(BufferedReader inFile){
@@ -111,11 +110,144 @@ public class Scanner{
         }
     }
 
-    private byte scanToken(){
-        switch(currentChar){
-            //Your switch
+    private byte scanToken() {
+
+        //local variable to hold the identifier type initialized to NOTHING token
+        byte currentToken = 12;
+
+        //check if the current first character is a letter
+        if (isLetter(currentChar)) {
+
+            //loop to read the string
+            do {
+                //append the current char to the string buffer currentSpelling
+                takeIt();
+            }
+            //condition as long as the first character is a letter
+            while (isDigit(currentChar) || isLetter(currentChar));
+
+            //return as an identifier to token class to decide if it is a SPELLING
+            currentToken = Token.IDENTIFIER;
         }
-        return 5;                 //After you replace this switch with your, remove this line.
+
+        //check to see if current first character is a digit
+        else if (isDigit(currentChar)) {
+
+            //loop to read the string
+            do {
+                //append to current character to the string buffer currentSpelling
+                takeIt();
+            }
+            //condition to make sure all characters are digits
+            while (isDigit(currentChar));
+
+            //return as a literal
+            currentToken = Token.LITERAL;
+        }
+
+        //if the first character was not a digit or letter
+        //this else statement will happen
+        else {
+
+            //switch statement to decide the currentToken
+            switch (currentChar) {
+
+                //case for left parenthesis
+                case ('('):
+                    takeIt();
+
+                    //returning Left Parenthesis Token
+                    return Token.LPAREN;
+
+                //case for right parenthesis
+                case (')'):
+                    takeIt();
+
+                    //returning Right parenthesis Token
+                    return Token.RPAREN;
+
+                //case for plus, multiplication, division, and equals
+                //skips to end of switch
+                case ('+'), ('*'), ('/'), ('='):
+                    takeIt();
+
+                    //setting currentToken as an Operator Token value
+                    currentToken = Token.OPERATOR;
+                    break;
+
+                //case for - symbol
+                //need to check if subtraction or a negative number
+                //skips to end of switch
+                case('-'):
+                    takeIt();
+
+                    //checking if next char is a digit
+                    if (isDigit(currentChar)){
+
+                        //loop to take all digits
+                        while (isDigit(currentChar)){
+                            takeIt();
+                        }
+
+                        //setting the token to a Literal
+                        currentToken=Token.LITERAL;
+                    }
+
+                    //if next char is not a digit
+                    else{
+
+                        //setting the Token to an Operator
+                        currentToken=Token.OPERATOR;
+                    }
+
+                    //skipping to end of switch
+                    break;
+
+                //case for "<" | "<=" | ">" | ">="
+                //skips to end of switch
+                case ('>'), ('<'):
+                    takeIt();
+
+                    //checking if the <,> is also followed by an equals sign
+                    if (currentChar == '=') {
+                        takeIt();
+                    }
+
+                    //setting currentToken as an Operator Token value
+                    currentToken = Token.OPERATOR;
+                    break;
+
+                //case for not equals. First checking if exclamation is present
+                //skips to end of switch
+                case ('!'):
+                    takeIt();
+
+                    //checking is equals followed the exclamation mark
+                    if (currentChar != '=') {
+                        //skipping to end of switch since currentToken is initialized to Nothing
+                        break;
+                    }
+                    //if it is an equals sign
+                    else {
+                        takeIt();
+
+                        //setting currentToken as an Operator Token value
+                        currentToken=Token.OPERATOR;
+                    }
+                    break;
+
+                //case for end of file
+                case ('\u0000'):
+                    takeIt();
+
+                    //setting currentToken to EOT
+                    currentToken=Token.EOT;
+                    break;
+            }
+        }
+            //returning the currentToken value
+            return currentToken;
+
     }
 
     private void scanSeparator(){
@@ -128,10 +260,10 @@ public class Scanner{
     }
 
     public Token scan(){
-        currentSpelling = new StringBuffer("");
+        currentSpelling = new StringBuffer();
         while(currentChar == ' ' || currentChar == '\n' || currentChar == '\r')
             scanSeparator();
-        currentKind = scanToken();
+        byte currentKind = scanToken();
         return new Token(currentKind, currentSpelling.toString(), line);
     }
 

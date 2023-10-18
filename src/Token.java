@@ -54,6 +54,6 @@ public class Token{
             RPAREN     = 10,
             OPERATOR   = 11,
             NOTHING    = 12,       //Never happen but we need to return some thing in
-    //the switch in class Scannerwhen there is an error
+    //the switch in class Scanner when there is an error
     EOT        = 13;
 }
