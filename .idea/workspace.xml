@@ -4,14 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="72932a50-684e-4b92-af7f-cfada64423d7" name="Changes" comment="Start">
-      <change beforePath="$PROJECT_DIR$/.idea/Testing/test.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/Testing/test.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/Testing/test2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/Testing/test2.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="72932a50-684e-4b92-af7f-cfada64423d7" name="Changes" comment="10/17 scanner v1 done">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Parser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Parser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Scanner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Scanner.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Token.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Token.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,7 +74,7 @@
       <workItem from="1697077578221" duration="3886000" />
       <workItem from="1697139217621" duration="2050000" />
       <workItem from="1697589709842" duration="116000" />
-      <workItem from="1697589838593" duration="8338000" />
+      <workItem from="1697589838593" duration="13917000" />
     </task>
     <task id="LOCAL-00001" summary="Start">
       <option name="closed" value="true" />
@@ -89,7 +84,15 @@
       <option name="project" value="LOCAL" />
       <updated>1695949053732</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="10/17 scanner v1 done">
+      <option name="closed" value="true" />
+      <created>1697599240217</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1697599240217</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -100,7 +103,19 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="master" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
@@ -108,6 +123,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Start" />
-    <option name="LAST_COMMIT_MESSAGE" value="Start" />
+    <MESSAGE value="10/17 scanner v1 done" />
+    <option name="LAST_COMMIT_MESSAGE" value="10/17 scanner v1 done" />
   </component>
 </project>
