@@ -6,7 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="72932a50-684e-4b92-af7f-cfada64423d7" name="Changes" comment="10/17 scanner v2....Finished. Parser class needs more commenting">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Testing/test.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/Testing/test.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Parser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Parser.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,7 +75,19 @@
       <workItem from="1697077578221" duration="3886000" />
       <workItem from="1697139217621" duration="2050000" />
       <workItem from="1697589709842" duration="116000" />
-      <workItem from="1697589838593" duration="14635000" />
+      <workItem from="1697589838593" duration="14718000" />
+      <workItem from="1697666614293" duration="9000" />
+      <workItem from="1697666637778" duration="25000" />
+      <workItem from="1697684853456" duration="230000" />
+      <workItem from="1697747115112" duration="317000" />
+      <workItem from="1697855426092" duration="25000" />
+      <workItem from="1698160171391" duration="207000" />
+      <workItem from="1698178123947" duration="13000" />
+      <workItem from="1698178154392" duration="268000" />
+      <workItem from="1698178445260" duration="1249000" />
+      <workItem from="1698183800883" duration="4025000" />
+      <workItem from="1698264276879" duration="1030000" />
+      <workItem from="1698265372467" duration="964000" />
     </task>
     <task id="LOCAL-00001" summary="Start">
       <option name="closed" value="true" />
@@ -100,7 +113,15 @@
       <option name="project" value="LOCAL" />
       <updated>1697604159501</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="10/17 scanner v2....Finished. Parser class needs more commenting">
+      <option name="closed" value="true" />
+      <created>1697604708554</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1697604708554</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
